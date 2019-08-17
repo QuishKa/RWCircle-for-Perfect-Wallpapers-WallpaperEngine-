@@ -1,6 +1,6 @@
 // Path: \Steam\steamapps\workshop\content\431960\884307090\js\PWCircle.js
 // user.smoothingFactor changes the smoothness of the Visualizer
-// 这是音效圈的实现代码
+// ??????????
 
 //set window.requestAnimationFrame
 /*
@@ -8,7 +8,7 @@
     w['r'+r] = w['r'+r] || w['webkitR'+r] || w['mozR'+r] || w['msR'+r] || w['oR'+r] || function(c){ w.setTimeout(c, 1000 / 60); };
 })(window, 'equestAnimationFrame');
 */
-// 这是音效圈的实现代码
+// ??????????
 
 //set window.requestAnimationFrame
 /*
@@ -29,7 +29,7 @@ var lastCalled = Date.now();
 var user = {
     barWidth: 20,
     barPadding: 5,
-    smoothingFactor: 5,
+    smoothingFactor: 2,
     peak: 1,
     titleOrder: true,
     updateRate: 5,
@@ -137,7 +137,7 @@ function setCan() {
 }
 
 
-/* 生成点 */
+/* ??? */
 function createPoint(arr){
     param.arr1 = [];
     param.arr2 = [];
@@ -145,21 +145,21 @@ function createPoint(arr){
         var deg
         if(param.showSemiCircle){
             switch (param.SemiCircledirection) {
-                case 1://上
-                    deg = Math.PI/120*(i+param.offsetAngle+0.5)*-1; //半圆角度
+                case 1://?
+                    deg = Math.PI/120*(i+param.offsetAngle+0.5)*-1; //????
                     break;
-                case 2://下
-                    deg = Math.PI/120*(i+param.offsetAngle+0.5); //半圆角度
+                case 2://?
+                    deg = Math.PI/120*(i+param.offsetAngle+0.5); //????
                     break;
-                case 3://左
-                    deg = Math.PI/120*(i+param.offsetAngle-179.5);//半圆角度
+                case 3://?
+                    deg = Math.PI/120*(i+param.offsetAngle-179.5);//????
                     break;
-                case 4://右
-                    deg = Math.PI/120*(i+param.offsetAngle+180.5); //半圆角度
+                case 4://?
+                    deg = Math.PI/120*(i+param.offsetAngle+180.5); //????
                     break;
             }
         }else{
-            deg = Math.PI/param.PolygonAngle*(i+param.offsetAngle)*3; //全圆角度
+            deg = Math.PI/param.PolygonAngle*(i+param.offsetAngle)*3; //????
         }
         var w1 = arr[i] ? arr[i] : 0;
         var w2;
@@ -179,12 +179,12 @@ function createPoint(arr){
                 offset2 = param.r*minW/2;
                 break;
             case 2:
-                offset1 = param.r*minW/2; // 外圆偏移
-                offset2 = param.r*minW/2-w-1; // 内圆偏移
+                offset1 = param.r*minW/2; // ????
+                offset2 = param.r*minW/2-w-1; // ????
                 break;
             case 3:
-                offset1 = param.r*minW/2+w+1; // 外圆偏移
-                offset2 = param.r*minW/2-w-1; // 内圆偏移
+                offset1 = param.r*minW/2+w+1; // ????
+                offset2 = param.r*minW/2-w-1; // ????
                 break;
         }
         var p1 = getXY(offset1, deg);
@@ -205,9 +205,9 @@ function getXY(offset, deg){
     return {'x':Math.cos(deg)*offset+param.cX*w, 'y':Math.sin(deg)*offset+param.cY*h};
 }
 
-/* 连线 */
+/* ?? */
 function style1(){
-    // 内外圆连线
+    // ?????
     ctx.beginPath();
     for(var i=0; i<120; i++){
         ctx.moveTo(param.arr1[i].x, param.arr1[i].y);
@@ -217,7 +217,7 @@ function style1(){
     ctx.stroke();
 }
 function style2(){
-    // 外圆
+    // ??
     ctx.beginPath();
     ctx.moveTo(param.arr1[0].x, param.arr1[0].y);
     for(var i=0; i<120; i++){
@@ -227,7 +227,7 @@ function style2(){
         ctx.closePath();
     }
     ctx.stroke();
-    // 内圆
+    // ??
     ctx.beginPath();
     if(param.showSemiCircle){
         ctx.moveTo(param.arr2[0].x, param.arr2[0].y);
@@ -244,7 +244,7 @@ function style2(){
         ctx.closePath();
     }
     ctx.stroke();
-    // 内外圆连线
+    // ?????
     ctx.beginPath();
     for(var i=0; i<120; i++){
         ctx.moveTo(param.arr1[i].x, param.arr1[i].y);
@@ -255,7 +255,7 @@ function style2(){
 
 }
 function style3(){
-    // 外圆
+    // ??
     ctx.beginPath();
     ctx.moveTo(param.arr1[0].x, param.arr1[0].y);
     for(var i=0; i<120; i++){
@@ -265,7 +265,7 @@ function style3(){
         ctx.closePath();
     }
     ctx.stroke();
-    // 内圆
+    // ??
     ctx.beginPath();
     if(param.showSemiCircle){
         ctx.moveTo(param.arr2[0].x, param.arr2[0].y);
@@ -555,7 +555,7 @@ function setCan() {
 }
 
 
-/* 生成点 */
+/* ??? */
 function createPoint(arr){
     param.arr1 = [];
     param.arr2 = [];
@@ -563,21 +563,21 @@ function createPoint(arr){
         var deg
         if(param.showSemiCircle){
             switch (param.SemiCircledirection) {
-                case 1://上
-                    deg = Math.PI/120*(i+param.offsetAngle+0.5)*-1; //半圆角度
+                case 1://?
+                    deg = Math.PI/120*(i+param.offsetAngle+0.5)*-1; //????
                     break;
-                case 2://下
-                    deg = Math.PI/120*(i+param.offsetAngle+0.5); //半圆角度
+                case 2://?
+                    deg = Math.PI/120*(i+param.offsetAngle+0.5); //????
                     break;
-                case 3://左
-                    deg = Math.PI/120*(i+param.offsetAngle-179.5);//半圆角度
+                case 3://?
+                    deg = Math.PI/120*(i+param.offsetAngle-179.5);//????
                     break;
-                case 4://右
-                    deg = Math.PI/120*(i+param.offsetAngle+180.5); //半圆角度
+                case 4://?
+                    deg = Math.PI/120*(i+param.offsetAngle+180.5); //????
                     break;
             }
         }else{
-            deg = Math.PI/param.PolygonAngle*(i+param.offsetAngle)*3; //全圆角度
+            deg = Math.PI/param.PolygonAngle*(i+param.offsetAngle)*3; //????
         }
         var w1 = arr[i] ? arr[i] : 0;
         var w2;
@@ -597,12 +597,12 @@ function createPoint(arr){
                 offset2 = param.r*minW/2;
                 break;
             case 2:
-                offset1 = param.r*minW/2; // 外圆偏移
-                offset2 = param.r*minW/2-w-1; // 内圆偏移
+                offset1 = param.r*minW/2; // ????
+                offset2 = param.r*minW/2-w-1; // ????
                 break;
             case 3:
-                offset1 = param.r*minW/2+w+1; // 外圆偏移
-                offset2 = param.r*minW/2-w-1; // 内圆偏移
+                offset1 = param.r*minW/2+w+1; // ????
+                offset2 = param.r*minW/2-w-1; // ????
                 break;
         }
         var p1 = getXY(offset1, deg);
@@ -623,9 +623,9 @@ function getXY(offset, deg){
     return {'x':Math.cos(deg)*offset+param.cX*w, 'y':Math.sin(deg)*offset+param.cY*h};
 }
 
-/* 连线 */
+/* ?? */
 function style1(){
-    // 内外圆连线
+    // ?????
     ctx.beginPath();
     for(var i=0; i<120; i++){
         ctx.moveTo(param.arr1[i].x, param.arr1[i].y);
@@ -635,7 +635,7 @@ function style1(){
     ctx.stroke();
 }
 function style2(){
-    // 外圆
+    // ??
     ctx.beginPath();
     ctx.moveTo(param.arr1[0].x, param.arr1[0].y);
     for(var i=0; i<120; i++){
@@ -645,7 +645,7 @@ function style2(){
         ctx.closePath();
     }
     ctx.stroke();
-    // 内圆
+    // ??
     ctx.beginPath();
     if(param.showSemiCircle){
         ctx.moveTo(param.arr2[0].x, param.arr2[0].y);
@@ -662,7 +662,7 @@ function style2(){
         ctx.closePath();
     }
     ctx.stroke();
-    // 内外圆连线
+    // ?????
     ctx.beginPath();
     for(var i=0; i<120; i++){
         ctx.moveTo(param.arr1[i].x, param.arr1[i].y);
@@ -673,7 +673,7 @@ function style2(){
 
 }
 function style3(){
-    // 外圆
+    // ??
     ctx.beginPath();
     ctx.moveTo(param.arr1[0].x, param.arr1[0].y);
     for(var i=0; i<120; i++){
@@ -683,7 +683,7 @@ function style3(){
         ctx.closePath();
     }
     ctx.stroke();
-    // 内圆
+    // ??
     ctx.beginPath();
     if(param.showSemiCircle){
         ctx.moveTo(param.arr2[0].x, param.arr2[0].y);
@@ -742,7 +742,6 @@ function wallpaperAudioListener(arr) {
     }
     var newAudio = [];
     var average = 0;
-    var summ = 0;
     peakValue = peakValue * 0.98 + max * 0.02;
     for (i = 0; i < 120; i++) {
         data[i] /= peakValue;
@@ -755,11 +754,9 @@ function wallpaperAudioListener(arr) {
             newAudio[i] = (data[i - 1] * 2 + data[i] * 3 + data[i + 1] * 2) / 7;
         }
         average += newAudio[i];
-        summ += arr[i];
     }
-    average /= 120;
-    if (summ > 0.001) {
         for (var i = 0; i < 120; i++) {
+        if (arr[i] > 0.001){
             if (newAudio[i] < average) {
                 newAudio[i] *= .7;
             } else if (newAudio[i] > average * 1.3) {
@@ -768,17 +765,18 @@ function wallpaperAudioListener(arr) {
                 newAudio[i] *= .9;
             }
             if (newAudio[i] > arr[i]) {
-                bars[i] = myheight[i] + (newAudio[i] - myheight[i]) / user.smoothingFactor;
+                bars[i] = myheight[i] + (newAudio[i] - myheight[i]) / 2;
                 myheight[i] = bars[i];
             }
             else if (newAudio[i] < arr[i]) {
-                bars[i] = myheight[i] - (myheight[i] - newAudio[i]) / user.smoothingFactor;
+                bars[i] = myheight[i] - (myheight[i] - newAudio[i]) / 2;
                 myheight[i] = bars[i];
             }
+        }else{
+                bars[i] = myheight[i] - myheight[i] / 3;
+                myheight[i] = bars[i];
         }
-    } else {
-        bars = 0;
-    }
+        }
 }
 
 function draw() {
